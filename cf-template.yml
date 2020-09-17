@@ -16,10 +16,10 @@ Resources:
           ToPort: 22
           CidrIp: 0.0.0.0/0
       Tags:
-        Key: Name
-        Value: !Sub Web Server of ${AWS::StackName} Stack
+       - Key: Name
+         Value: !Sub Web Server of ${AWS::StackName} Stack
   WebServerHost:
-    Type: AWS::EC2::Instance
+    Type: "AWS::EC2::Instance"
     Properties:
       ImageId: ami-0c94855ba95c71c99
       InstanceType: t2.micro
